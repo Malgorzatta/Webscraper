@@ -10,13 +10,13 @@ jobs:
         uses: actions/checkout@v2
       - name: Set up Python
         uses: actions/setup-python@v2
-        with:
-          python-version: 3.11
-          - name: Install dependencies
-            run: |
-              python -m pip install --upgrade pip
-          - name: Run M2E
-            run: python M2E.py
+          with:
+            python-version: 3.11
+            - name: Install dependencies
+              run: |
+                python -m pip install --upgrade pip
+            - name: Run M2E
+              run: python M2E.py
 
       - name: Upload M2E_games.xlsx as artifact
         uses: actions/upload-artifact@v2
