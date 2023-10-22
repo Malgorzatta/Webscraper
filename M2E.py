@@ -3,10 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 import numpy as np
-from datetime import datetime
-import openpyxl
-from openpyxl import workbook
-import time
 
 # Create an URL object
 pages = np.arange(1,50) #50
@@ -82,4 +78,3 @@ mydata.drop('Social 24h', inplace=True, axis=1)
 print(mydata)
 
 mydata.to_excel("M2E_games.xlsx")
-#mydata.to_csv('P2E.csv')
